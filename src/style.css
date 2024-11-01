@@ -9,6 +9,7 @@
   --bg-color-dark: rgb(75, 75, 205);
   --button-color: rgb(120, 120, 250);
   --font-color: rgb(245, 245, 245);
+  --info-div-color: rgb(10, 10, 179);
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -74,4 +75,39 @@ header > .search {
 
 .search-submit:active {
   background-color: var(--button-color);
+}
+
+.weather-info {
+  margin: 50px 0;
+  border: 1px solid black;
+  min-width: 480px;
+}
+
+.city {
+  color: var(--font-color);
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.city > p {
+  font-size: 2.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  background-color: var(--info-div-color);
+  color: var(--font-color);
+  padding: 15px;
+  font-weight: 700;
+  border-radius: 25px;
+  gap: 30px 10px;
+  box-shadow: 2px 2px 4px black;
+}
+
+.info {
+  text-align: center;
+  padding: 10px;
+  text-shadow: 1px 1px 2px black;
 }
