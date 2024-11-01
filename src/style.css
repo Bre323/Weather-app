@@ -79,7 +79,6 @@ header > .search {
 
 .weather-info {
   margin: 50px 0;
-  border: 1px solid black;
   min-width: 480px;
 }
 
@@ -111,3 +110,44 @@ header > .search {
   padding: 10px;
   text-shadow: 1px 1px 2px black;
 }
+
+.week-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  color: var(--font-color);
+  text-shadow: 1px 1px 2px black;
+}
+
+.week-forecast > h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.week {
+  background-color: var(--info-div-color);
+  border-radius: 25px;
+  padding: 15px;
+  font-weight: 700;
+  box-shadow: 2px 2px 4px black;
+  width: 250px;
+}
+
+.week > ul {
+  list-style: none;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.forecast-info {
+  text-align: center;
+}
+
