@@ -10,7 +10,7 @@ function displayWeatherInfo(weather) {
   let sunrise = weather.currentConditions.sunrise;
   let moonphase = weather.currentConditions.moonphase;
   let sunset = weather.currentConditions.sunset;
-  
+
   weatherInfoSection.innerHTML = '';
   weatherInfoSection.insertAdjacentHTML('beforeend', 
     `
@@ -54,67 +54,67 @@ function displayWeatherInfo(weather) {
   );
 }
 
-function displayWeekForecast() {
+function displayWeekForecast(weather) {
   weekForecastSection.innerHTML = '';
-  weekForecastSection.insertAdjacentHTML('beforeend', 
-    `
+  weekForecastSection.insertAdjacentHTML('beforeend', `
+
     <h2>Week Forecast</h2>
       
     <div class="week">
       <ul>
         <li class="forecast">
-          <p>Monday</p>
+          <p>${weather.days[0].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[0].temp}°C</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>Tuesday</p>
+          <p>${weather.days[1].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[1].temp}°C</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>Wednesday</p>
+          <p>${weather.days[2].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[2].temp}°C</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>Thursday</p>
+          <p>${weather.days[3].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[3].temp}°C</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>Friday</p>
+          <p>${weather.days[4].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[4].temp}°C</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>Saturday</p>
+          <p>${weather.days[5].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[5].temp}°C</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>Sunday</p>
+          <p>${weather.days[6].datetime}</p>
 
           <div class="forecast-info">
-            <p>30°C</p>
+            <p>${weather.days[6].temp}°C</p>
           </div>
         </li>
       </ul>
