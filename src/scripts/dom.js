@@ -3,7 +3,6 @@ let weekForecastSection = document.querySelector('.week-forecast');
 
 function displayWeatherInfo() {
   weatherInfoSection.innerHTML = '';
-
   weatherInfoSection.insertAdjacentHTML('beforeend', 
     `
       <div class="city">
@@ -46,4 +45,73 @@ function displayWeatherInfo() {
   );
 }
 
-export { displayWeatherInfo };
+function displayWeekForecast() {
+  weekForecastSection.innerHTML = '';
+  weekForecastSection.insertAdjacentHTML('beforeend', 
+    `
+    <h2>Week Forecast</h2>
+      
+    <div class="week">
+      <ul>
+        <li class="forecast">
+          <p>Monday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+
+        <li class="forecast">
+          <p>Tuesday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+
+        <li class="forecast">
+          <p>Wednesday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+
+        <li class="forecast">
+          <p>Thursday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+
+        <li class="forecast">
+          <p>Friday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+
+        <li class="forecast">
+          <p>Saturday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+
+        <li class="forecast">
+          <p>Sunday</p>
+
+          <div class="forecast-info">
+            <p>30°C</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    `
+  );
+}
+
+export { displayWeatherInfo, displayWeekForecast };
