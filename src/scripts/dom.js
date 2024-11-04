@@ -66,7 +66,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[0].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[0].temp}°C</p>
+            <p>${weather.days[0].temp.toFixed(0)}°C</p>
           </div>
         </li>
 
@@ -74,7 +74,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[1].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[1].temp}°C</p>
+            <p>${weather.days[1].temp.toFixed(0)}°C</p>
           </div>
         </li>
 
@@ -82,7 +82,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[2].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[2].temp}°C</p>
+            <p>${weather.days[2].temp.toFixed(0)}°C</p>
           </div>
         </li>
 
@@ -90,7 +90,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[3].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[3].temp}°C</p>
+            <p>${weather.days[3].temp.toFixed(0)}°C</p>
           </div>
         </li>
 
@@ -98,7 +98,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[4].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[4].temp}°C</p>
+            <p>${weather.days[4].temp.toFixed(0)}°C</p>
           </div>
         </li>
 
@@ -106,7 +106,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[5].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[5].temp}°C</p>
+            <p>${weather.days[5].temp.toFixed(0)}°C</p>
           </div>
         </li>
 
@@ -114,7 +114,7 @@ function displayWeekForecast(weather) {
           <p>${weather.days[6].datetime}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[6].temp}°C</p>
+            <p>${weather.days[6].temp.toFixed(0)}°C</p>
           </div>
         </li>
       </ul>
