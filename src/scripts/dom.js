@@ -1,10 +1,11 @@
-let infoSections = document.querySelector('.info-sections');
+let weatherInfoSection = document.querySelector('.weather-info');
+let weekForecastSection = document.querySelector('.week-forecast');
 
 function displayWeatherInfo() {
-  infoSections.innerHTML = '';
+  weatherInfoSection.innerHTML = '';
 
-  infoSections.insertAdjacentHTML('beforeend', 
-    `<section class="weather-info">
+  weatherInfoSection.insertAdjacentHTML('beforeend', 
+    `
       <div class="city">
         <h2>Florianópolis, Brazil</h2>
         <p class="temperature">27°C</p>
@@ -41,7 +42,6 @@ function displayWeatherInfo() {
           <p>38:00</p>
         </div>
       </div>
-    </section>
     `
   );
 }
