@@ -5,12 +5,14 @@ async function getWeatherData(city) {
   let response = await fetch(url);
   let weatherData = response.json();
 
-  console.log(city);
-  console.log(await weatherData);
-  return weatherData;
+  if(response.ok) {
+    console.log(city);
+    console.log(await weatherData);
+    return weatherData;
+  }
+  else {
+    alert('The location is wrong or do not exist!');
+  }
 }
-
-let data = await getWeatherData();
-console.log(data.resolvedAddress);
 
 export { getWeatherData };

@@ -6,6 +6,8 @@ let cityButton = document.querySelector('.search-submit');
 
 cityButton.addEventListener('click', async () => {
   let weatherData = await getWeatherData(cityInput.value);
-  displayWeatherInfo(weatherData);
-  displayWeekForecast(weatherData);
+  if(weatherData) {
+    displayWeatherInfo(weatherData);
+    displayWeekForecast(weatherData);
+  }
 });
