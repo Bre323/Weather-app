@@ -1,3 +1,4 @@
+import { handleDate, handleTemperature } from "./handlers";
 let weatherInfoSection = document.querySelector('.weather-info');
 let weekForecastSection = document.querySelector('.week-forecast');
 
@@ -63,58 +64,58 @@ function displayWeekForecast(weather) {
     <div class="week">
       <ul>
         <li class="forecast">
-          <p>${weather.days[0].datetime}</p>
+          <p>${handleDate(weather.days[0].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[0].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[0].temp)}</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>${weather.days[1].datetime}</p>
+          <p>${handleDate(weather.days[1].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[1].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[1].temp)}</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>${weather.days[2].datetime}</p>
+          <p>${handleDate(weather.days[2].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[2].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[2].temp)}</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>${weather.days[3].datetime}</p>
+          <p>${handleDate(weather.days[3].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[3].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[3].temp)}</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>${weather.days[4].datetime}</p>
+          <p>${handleDate(weather.days[4].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[4].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[4].temp)}</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>${weather.days[5].datetime}</p>
+          <p>${handleDate(weather.days[5].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[5].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[5].temp)}</p>
           </div>
         </li>
 
         <li class="forecast">
-          <p>${weather.days[6].datetime}</p>
+          <p>${handleDate(weather.days[6].datetime)}</p>
 
           <div class="forecast-info">
-            <p>${weather.days[6].temp.toFixed(0)}°C</p>
+            <p>${handleTemperature(weather.days[6].temp)}</p>
           </div>
         </li>
       </ul>
