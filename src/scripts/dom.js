@@ -56,73 +56,40 @@ function displayWeatherInfo(weather) {
   );
 }
 
+
 function displayWeekForecast(weather) {
   weekForecastSection.innerHTML = '';
-  weekForecastSection.insertAdjacentHTML('beforeend', `
-
+  weekForecastSection.insertAdjacentHTML('beforeend', 
+    `
     <h2>Week Forecast</h2>
       
     <div class="week">
-      <ul>
-        <li class="forecast">
-          <p>${handleDate(weather.days[0].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[0].temp)}</p>
-          </div>
-        </li>
-
-        <li class="forecast">
-          <p>${handleDate(weather.days[1].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[1].temp)}</p>
-          </div>
-        </li>
-
-        <li class="forecast">
-          <p>${handleDate(weather.days[2].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[2].temp)}</p>
-          </div>
-        </li>
-
-        <li class="forecast">
-          <p>${handleDate(weather.days[3].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[3].temp)}</p>
-          </div>
-        </li>
-
-        <li class="forecast">
-          <p>${handleDate(weather.days[4].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[4].temp)}</p>
-          </div>
-        </li>
-
-        <li class="forecast">
-          <p>${handleDate(weather.days[5].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[5].temp)}</p>
-          </div>
-        </li>
-
-        <li class="forecast">
-          <p>${handleDate(weather.days[6].datetime)}</p>
-
-          <div class="forecast-info">
-            <p>${handleTemperature(weather.days[6].temp)}</p>
-          </div>
-        </li>
-      </ul>
+      <ul></ul>
     </div>
     `
   );
+
+  generateForecastListItem(weather);
 }
+
+
+function generateForecastListItem(weather) {
+  let weekForecastList = document.querySelector('.week > ul');
+  
+  for(let i = 0; i < 7; i++) {
+    weekForecastList.insertAdjacentHTML('beforeend', 
+      `
+        <li class="forecast">
+          <p>${handleDate(weather.days[i].datetime)}</p>
+
+          <div class="forecast-info">
+            <p>${handleTemperature(weather.days[i].temp)}</p>
+          </div>
+        </li>
+      `
+    );
+  }
+}
+
 
 export { displayWeatherInfo, displayWeekForecast };
