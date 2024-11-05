@@ -1,16 +1,17 @@
-import { handleDate, handleTemperature } from "./handlers";
+import { handleDate, handleTemperature, handleTime } from "./handlers";
 let weatherInfoSection = document.querySelector('.weather-info');
 let weekForecastSection = document.querySelector('.week-forecast');
 
 function displayWeatherInfo(weather) {
   let cityResolvedAddress = weather.resolvedAddress;
-  let temperature = `${weather.currentConditions.temp}°C`;
+  let temperature = `${weather.currentConditions.temp} °C`;
   let humidity = `${weather.currentConditions.humidity}%`;
-  let windSpeed = `${weather.currentConditions.windspeed}km/h`;
+  let windSpeed = `${weather.currentConditions.windspeed} km/h`;
   let chanceOfRain = `${weather.currentConditions.precipprob}%`;
   let sunrise = weather.currentConditions.sunrise;
-  let moonphase = weather.currentConditions.moonphase;
+  let feelsLikeTemperature = weather.currentConditions.feelslike;
   let sunset = weather.currentConditions.sunset;
+  let date = weather.days[0].datetime;
 
   weatherInfoSection.innerHTML = '';
   weatherInfoSection.insertAdjacentHTML('beforeend', 
@@ -38,17 +39,17 @@ function displayWeatherInfo(weather) {
 
         <div class="info">
           <p>Sunrise</p>
-          <p>${sunrise}</p>
+          <p>${handleTime(date, sunrise)}</p>
         </div>
 
         <div class="info">
-          <p>Moon</p>
-          <p>${moonphase}</p>
+          <p>Feels like</p>
+          <p>${handleTemperature(feelsLikeTemperature)}</p>
         </div>
 
         <div class="info">
           <p>Sunset</p>
-          <p>${sunset}</p>
+          <p>${handleTime(date, sunset)}</p>
         </div>
       </div>
     `
