@@ -5,8 +5,8 @@ let cityInput = document.querySelector('.search-input');
 let cityButton = document.querySelector('.search-submit');
 
 cityButton.addEventListener('click', async (event) => {
-  let weatherData = await getWeatherData(cityInput.value);
   event.preventDefault();
+  let weatherData = await getWeatherData(cityInput.value);
   
   if(weatherData) {
     displayWeatherInfo(weatherData);
